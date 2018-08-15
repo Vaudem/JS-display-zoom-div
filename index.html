@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Training 6 : apparition</title>
+
+	<style>
+		*{
+			box-sizing: border-box;
+			padding :0;
+			margin: 0;
+		}
+		
+		body{
+		font-family: Avenir;
+		}
+
+		h1{
+			color: dodgerblue;
+			font-size: 22px;
+		}
+
+		h2{
+				font-size: 16px;
+			}
+
+		div{
+			display: block;
+		}
+
+		.child{
+			width: 98%;
+			height: 30px;
+			margin: 10px auto;
+			background-color: turquoise;
+			color: pink;
+			/*pointer-events: none;  ne capte pas l'event*/
+
+		}
+
+		.root{
+			padding-top: 5px;
+			width: 100%;
+			height: auto;
+			background-color: pink;
+			opacity : 0;
+			transition: 0.5s;
+			padding-bottom : 5px;
+		}
+
+		.revealed{
+			opacity : 1;
+			transition : 0.5s;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>Hey... I'm just here &darr;</h1>
+	<input type="checkbox" id="check">
+
+	<div id="root" class="root">
+		<input type="range" id="range" value ="30" min="30" max="100" name="volume"> 
+		<div class="child">a</div>
+		<div class="child">b</div>
+		<div class="child">c</div>
+
+	</div>
+
+	<script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
